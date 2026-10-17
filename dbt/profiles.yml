@@ -1,0 +1,7 @@
+﻿nl2sql:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../nl2sql.duckdb'
+      threads: 4

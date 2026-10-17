@@ -1,0 +1,16 @@
+﻿name: 'nl2sql'
+version: '1.0.0'
+config-version: 2
+profile: 'nl2sql'
+
+model-paths: ['models']
+target-path: 'target'
+
+models:
+  nl2sql:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

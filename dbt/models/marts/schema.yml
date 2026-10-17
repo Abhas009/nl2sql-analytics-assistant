@@ -1,0 +1,14 @@
+﻿version: 2
+
+models:
+  - name: fct_repo_activity
+    columns:
+      - name: event_date
+        tests:
+          - not_null
+      - name: repo_name
+        tests:
+          - not_null
+      - name: total_events
+        tests:
+          - not_null

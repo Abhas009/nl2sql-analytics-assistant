@@ -18,3 +18,34 @@ An end-to-end AI Data Engineering project that translates natural language into 
 1. Clone the repo and install dependencies:
    ```bash
    pip install -r requirements.txt
+
+   Generate the local data:
+
+bash
+python scripts/generate_data.py
+Build the dbt models:
+
+bash
+cd dbt && dbt run --profiles-dir . && cd ..
+Add your Gemini API key to a .env file:
+
+env
+GEMINI_API_KEY=your_key_here
+Start the FastAPI backend:
+
+bash
+uvicorn app.main:app --reload
+Start the Streamlit frontend (in a new terminal):
+
+bash
+streamlit run ui.py
+text
+
+### Step 3: Save and Push
+1. Save the file in Notepad (`Ctrl + S`) and close Notepad.
+2. Go back to your terminal and run:
+```powershell
+git add README.md
+git commit -m "docs: fix README formatting"
+git push origin main
+
